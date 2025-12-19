@@ -18,14 +18,18 @@ export default function Welcome({ onStart, onCategorySelect, selectedCategory })
         <div
           style={{
             display: "flex",
-            justifyContent: "space-between",
+            flexWrap: "wrap",           // ✅ allows stacking
+            gap: "20px",
             alignItems: "center",
+            justifyContent: "space-between",
           }}
         >
-          <div style={{ flex: 1, paddingRight: "20px" }}>
+          {/* LEFT CONTENT */}
+          <div style={{ flex: "1 1 300px" }}>
             <h2 className="welcome-animated mb-3">
               Welcome to Islamic Knowledge Quiz
             </h2>
+
             <p style={{ fontSize: "16px", opacity: 0.85 }}>
               Test your knowledge about Islam in different categories.
             </p>
@@ -37,19 +41,21 @@ export default function Welcome({ onStart, onCategorySelect, selectedCategory })
 
             <div className="mt-3">
               <StartButton
-                onStart={onStart}   // ✅ start quiz directly
+                onStart={onStart}
                 disabled={!selectedCategory}
               />
             </div>
           </div>
 
-          <div>
+          {/* RIGHT IMAGE */}
+          <div style={{ flex: "1 1 200px", textAlign: "center" }}>
             <img
               src="/images/myphoto.png"
               alt="Islam quiz"
               style={{
-                width: "260px",
-                height: "260px",
+                width: "100%",
+                maxWidth: "260px",   // ✅ responsive
+                height: "auto",
                 objectFit: "contain",
               }}
             />
