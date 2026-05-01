@@ -25,8 +25,8 @@ Islamic quiz apps are commonly used to help users learn topics like Quran, Hadit
 ## 🛠️ Technologies Used
 
 * HTML / CSS
-* JavaScript *(if applicable)*
-* Python *(if backend or logic used)*
+* React Js 
+* Php
 
 ---
 
@@ -46,11 +46,8 @@ cd islamic-quiz
 
 3. Run the project:
 
-* If Python:
 
-```bash
-python main.py
-```
+
 
 * If Web:
   Just open `index.html` in your browser
